@@ -21,35 +21,16 @@ import { Recette } from 'src/app/models/recette';
   styleUrls: ['../../../assets/css/home-light.component.css'],
   encapsulation: ViewEncapsulation.ShadowDom
 })
-export class HomeLightComponent implements OnInit, AfterViewInit {
+export class HomeLightComponent implements OnInit {
 
   @ViewChild('example') example!: ElementRef;
-  @ViewChildren('children') children!: QueryList<ElementRef>;
+
 
   recettes: Recette[] = [];
   recettesCarroussel: Recette[] = [];
 
 
   constructor(private router: Router, private elementRef: ElementRef, private recetteService: RecettesService) {
-  }
-
-
-  ngAfterViewInit(): void {
-    console.log(this.children)
-    this.children.forEach((element, index, children) => {
-      element.nativeElement.childNodes.forEach((value: Element) => {
-        value.addEventListener("click", function (event) {//add a click event
-          console.log(event);
-
-          children.forEach((elementT) => {
-            elementT.nativeElement.childNodes.forEach((valueT: Element) => {
-              valueT.classList.remove('panel_active')
-            });
-          });
-          value.classList.add("panel_active");//when i click i add a class style 'active '
-        })//
-      })
-    });
   }
 
   ngOnInit(): void {
@@ -72,22 +53,6 @@ export class HomeLightComponent implements OnInit, AfterViewInit {
     this.recetteService.recettesCarrousel().subscribe(response => {
       this.recettesCarroussel = response;
     })
-
-
-    this.children.forEach((element, index, children) => {
-      element.nativeElement.childNodes.forEach((value: Element) => {
-        value.addEventListener("click", function (event) {//add a click event
-          console.log(event);
-
-          children.forEach((elementT) => {
-            elementT.nativeElement.childNodes.forEach((valueT: Element) => {
-              valueT.classList.remove('panel_active')
-            });
-          });
-          value.classList.add("panel_active");//when i click i add a class style 'active '
-        })//
-      })
-    });
   }
 
   getImage(file: string): string {

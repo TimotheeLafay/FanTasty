@@ -164,8 +164,8 @@ hr.hline_color {
   font-family: inherit;
   font-size: 1rem;
   font-weight: 500;
-  line-height: inherit;  
-  color: #7a61f8ea;  
+  line-height: inherit;
+  color: #7a61f8ea;
   text-transform: capitalize;
   text-rendering: optimizeLegibility;
 }
@@ -194,7 +194,7 @@ hr.hline_color {
   margin: 0;
   display: inline-flex;
   justify-content: space-evenly;
-    
+
 }
 
 ::shadow h1 {
@@ -258,7 +258,7 @@ hr.hline_color {
 .login{
   margin: 10px;
     display: flex;
-    float: right;    
+    float: right;
     margin-top: 8px;
 }
 .login-btn-img{
@@ -356,7 +356,7 @@ footer {
     transition-delay: .2s;
     padding: 14px;
 }
-  
+
 .footer-button:after {
     content: "";
     position: absolute;
@@ -367,19 +367,19 @@ footer {
     width: 86px;
     transition: .6s;
 }
-  
+
 .footer-button:hover {
     color: black;
     background-color: white;
 }
-  
+
 .footer-button:hover:after {
     width: 112px;
     right: 0px;
 }
 
 
-  
+
 h2 {
     font-weight: 300;
     line-height: 1.8;
@@ -388,12 +388,12 @@ h2 {
     letter-spacing: 0.03em;
     padding: 15px 0 0 0;
 }
-  
+
 .color {
     color: white;
     font-weight: 400;
 }
-  
+
 h3 {
     font-weight: 400;
     font-size: 13px;
@@ -406,20 +406,20 @@ h3 {
 h3.desktop {
     padding-top: 30px;
 }
-  
+
 ul {
     line-height: 1.8;
     list-style-type: none;
     padding: 0;
 }
-  
+
 li {
     font-weight: 300;
     font-size: 13px;
     color: #d1d1d1;
     letter-spacing: 0.03em;
 }
-  
+
 p {
     font-weight: 300;
     font-size: 13px;
@@ -427,16 +427,16 @@ p {
     line-height: 1.8;
     letter-spacing: 0.03em;
 }
-  
+
 a {
     text-decoration: none;
     color: #d1d1d1;
 }
-  
+
 a:hover {
     color: white;
 }
-  
+
 .desktop {
     display: auto;
 }
@@ -454,7 +454,7 @@ a:hover {
 }
 
 @media (max-width: 1024px) {
-  
+
 footer {
     padding: 50px 0 5px 0 !important;
 }
@@ -514,7 +514,7 @@ footer {
   align-items: center;
 }
 .title-users-recipes{
-  
+
   font-size: 26px;
   font-weight:unset;
   color: var(--main-color-light);
@@ -530,7 +530,7 @@ footer {
   height: 100%;
   align-items: center;
 }
-.title_container_universe{  
+.title_container_universe{
   margin: 40px 0 8px -168px;
   display:flex;
   flex-direction: row;
@@ -545,7 +545,7 @@ footer {
 }
 .title-universe{
   font-size: 27.5px;
-  font-weight:unset;  
+  font-weight:unset;
   color: var(--main-color-light);
   font-family: 'Bebas Neue', cursive;
 }
@@ -598,7 +598,7 @@ footer {
     height: auto;
 }
 
-.panel{  
+.panel{
     margin: 10px;
     border-radius: 30px;
     width: 168px;
@@ -619,7 +619,8 @@ footer {
 }
 
 .panel_active{
-    flex:0.45; 
+    flex:0.45;
+  width: 500px;
 }
 .panel_active h3{
     opacity:1;
@@ -628,7 +629,7 @@ footer {
 
 @media (max-width:480px){
     .container{
-        width:100vw; 
+        width:100vw;
     }
     .panel:nth-of-type(4),.panel:nth-of-type(5){
         display:none;
@@ -670,7 +671,7 @@ footer {
 .cards-list {
   z-index: 0;
   width: 1224px;
-  display: flex;  
+  display: flex;
   justify-content: center;
   flex-wrap: wrap;
   margin-bottom: 90px;
@@ -795,7 +796,7 @@ footer {
 .columns {
 	columns: 350px 2;
 }
-.title-recipe, 
+.title-recipe,
 .subtitle-recipe {
 	font-size: 2em;
   font-family: 'Mouse Memoirs', sans-serif;
@@ -849,12 +850,12 @@ li {
   color: var(--main-color-light);
 }
 
-ol {	
+ol {
 	margin: 0;
 	list-style-position: inside;
 }
 ol > li {
-	
+
 	margin-bottom: 5px;
 }
 ol > li::before {

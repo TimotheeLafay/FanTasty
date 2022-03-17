@@ -1,0 +1,6 @@
+<div class="container-panels" #children style="display: inline-flex">
+  <div class="panel" *ngFor="let recette of recettes">
+    <img class="img_panel" [src]="getImage(recette.photo)" />
+  </div>
+</div>
+

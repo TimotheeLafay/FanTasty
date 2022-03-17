@@ -16,6 +16,7 @@ import {FavoriteComponent} from '../../components/favorite/favorite.component';
 import {UserModule} from "../user-module/user.module";
 import {SearchFormComponent} from 'src/app/components/search-form/search-form.component';
 import {SearchResultsComponent} from 'src/app/components/search-results/search-results.component';
+import {CarrouselComponent} from "../../components/carrousel/carrousel.component";
 
 
 @NgModule({
@@ -30,7 +31,8 @@ import {SearchResultsComponent} from 'src/app/components/search-results/search-r
     LoginComponent,
     FavoriteComponent,
     SearchFormComponent,
-    SearchResultsComponent
+    SearchResultsComponent,
+    CarrouselComponent
   ],
   imports: [
     BrowserModule,
