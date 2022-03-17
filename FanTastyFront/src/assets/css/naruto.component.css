@@ -107,17 +107,6 @@ hr.hline_color {
     
 }
 
-h1 {
-    position: relative;
-    margin: 0;
-    padding:0;
-    font-family: 'Mrs Sheppards', cursive;
-    font-weight: 100;
-    font-size: 55px;
-    color: var(--main-color-naruto);
-}
-
-
 .search > div {
   display: inline-block;
   position: relative;
@@ -551,6 +540,11 @@ figure{
 .recipe-template_img {
 	width: 400px;
 	border-radius: 30px;
+}
+
+.favorite-recipe_img:hover{
+  box-shadow: 0 0 23px var(--main-color-naruto),
+              0 0 23px var(--main-color-naruto);
 }
 
 figcaption, p {

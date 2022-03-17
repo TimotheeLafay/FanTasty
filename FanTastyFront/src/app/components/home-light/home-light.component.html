@@ -12,13 +12,16 @@
 
     </div>
     <div class="title_container_duo">
-        <p class="tags_duo">#Superman #Marvel #Pizza #CupCake </p>
+        <p class="tags_duo">#Naruto #HarryPotter #Ramen #Bière </p>
         <h2 class="title-users-recipes title_duo">Le duo du jour</h2>
         <img class="duo_icon" src="../../assets/img/two.png" />
     </div>
     <div class="recipes-home">
-        <div class="recipe recipe_1"></div>
-        <div class="recipe recipe_2"></div>
+        <div class="recipe" *ngFor="let recipe of recettes">
+            <a routerLink="/{{recipe.univers | lowercase}}/recette/{{recipe.id}}">
+                <img class="daily_recipe" [src]="getImage(recipe.photo)" />
+            </a>
+        </div>
     </div>
 
     <div class="title_container_universe">

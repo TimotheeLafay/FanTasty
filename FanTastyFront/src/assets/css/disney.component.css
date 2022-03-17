@@ -535,7 +535,10 @@ figcaption::before {
 .favorite-recipe_img{
     border: solid 2.5px var(--main-color-disney);
 }
-
+.favorite-recipe_img:hover{
+  box-shadow: 0 0 23px var(--main-color-disney),
+              0 0 23px var(--main-color-disney);
+}
 
 .container_loader {
   display: flex;
@@ -622,6 +625,7 @@ figcaption::before {
   font-size: 17px;
   font-weight: unset;
 }
+
 
 .containerIcon{
   display: flex;

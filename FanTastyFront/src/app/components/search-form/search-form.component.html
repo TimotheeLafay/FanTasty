@@ -1,10 +1,11 @@
 <div class="search-box-modal-over disable" (click)="disable()"></div>
 
-<div class="search-container_modal">
+<div>
   <form [formGroup]="searchForm" (ngSubmit)="btnClickSearch()" novalidate>
-    <input type="input" class="search-input" placeholder="miam miam..." (click)="displayModal()" />
+    <input type="input" class="search-input bg-light_search-modal" placeholder="miam miam..."
+      (click)="displayModal()" />
 
-    <div id="search-box-model-container" class="search-box_modal disable">
+    <div id="search-box-model-container" class="search-box-model-container_ID search-box_modal disable">
       <div class="search-box-modal-wrapper">
         <div class="search-box_modal">
           <h4>Type</h4>
@@ -44,8 +45,10 @@
           </ng-container>
         </div>
 
-        <input class="filter_btn" type="submit" value="Filtrer">
-        <button (click)="btnClickReset()">Reset</button>
+        <div class="btn-filter_container">
+          <input class="filter_btn" type="submit" value="Filtrer">
+          <button class="reset_btn" (click)="btnClickReset()">Reset</button>
+        </div>
       </div>
     </div>
   </form>

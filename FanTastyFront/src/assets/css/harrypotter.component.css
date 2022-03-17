@@ -667,8 +667,10 @@ figcaption::before {
 .favorite-recipe_img{
     border: solid 2.5px var(--main-color-harrypotter);
 }
-
-
+.favorite-recipe_img:hover{
+  box-shadow: 0 0 23px var(--main-color-harrypotter),
+              0 0 23px var(--main-color-harrypotter);
+}
 .container_loader {
   display: flex;
   width: 100vw;

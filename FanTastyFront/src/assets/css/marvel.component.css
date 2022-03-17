@@ -60,9 +60,9 @@ hr.hline_color {
   background: none;
 }
 .hamburger-icon{
-  margin-top: -8px;
-  width: 60px;
-  height: 60px;;
+  margin-top: -6px;
+  width: 57px;
+  height: 57px;;
 }
 
 .title {
@@ -204,17 +204,6 @@ hr.hline_color {
   justify-content: space-evenly;
     
 }
-
-h1 {
-    position: relative;
-    margin-top: 6px;
-    padding:0;
-    font-family: 'Coda', cursive;
-    font-weight: lighter;
-    font-size: 45px;
-    color: var(--main-color-marvel);
-}
-
 
 .search > div {
   display: inline-block;
@@ -648,6 +637,11 @@ figure{
 .recipe-template_img {
 	width: 400px;
 	border-radius: 30px;
+}
+
+.favorite-recipe_img:hover{
+  box-shadow: 0 0 23px var(--main-color-marvel),
+              0 0 23px var(--main-color-marvel);
 }
 
 figcaption, p {

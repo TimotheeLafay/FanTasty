@@ -241,9 +241,6 @@ h1 {
   outline: none;
   font-size: 20px;
   color: var(--link-color-light);
-  background: url(../img/control-light.png) 5px no-repeat;
-  background-size: 30px;
-  background-position-x: 97%;
   margin-top: 10px;
   margin-left: 10px;
 }
@@ -410,9 +407,10 @@ h1 {
     border: solid 2.5px var(--main-color-light);
 }
 .favorite-recipe_img:hover{
-  text-shadow: 0 0 10px var(--main-color-light),
+  box-shadow: 0 0 10px var(--main-color-light),
               0 0 10px var(--main-color-light);
 }
+
 .logout_btn {
    margin: 18px;
    text-decoration: none;
@@ -442,13 +440,15 @@ h1 {
   font-size: 14px;
 }
 
+/* START MODAL SEARCH **/
+
 #search-box-model-container.disable {
   display: none;
 }
 
 #search-box-model-container.active {
   display: flex;
-  transform: translateY(10px);
+  transform: translateY(80px);
   transition: transform 0.5s ease-in-out;
   border-radius: 20px;
   padding: 15px;
@@ -458,8 +458,8 @@ h1 {
   border: 2.5px solid var(--main-color-light);
   font-family: 'Encode Sans Expanded', sans-serif;
   color: var(--main-color-light);
-  background-color: white;
   margin-left: 10px;
+  justify-content: center;
 }
 
 .search-box-modal-over.disable {
@@ -482,22 +482,65 @@ h1 {
   overflow-y: unset;
 }
 
+.search-input-prop {
+  z-index: 999;
+  position: absolute;
+  transform: translateY(10px);
+}
+
 .disable-scroll {
   overflow: hidden;
 }
 
+.btn-filter_container{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 15px;
+}
+
 .filter_btn {
   margin: 18px;
-    padding: 10px;
-    text-decoration: none;
-    background: var(--main-color-light);
-    border: 2.5px solid var(--main-color-light);
-    transition: flex 0.7s ease-in;
-    font-family: 'Encode Sans', sans-serif;
-    border-radius: 10px;
-    color: #fffafa;
-    width: 122px;
-    height: 42px;
-    font-size: 15px;
-    cursor: pointer;
+  padding: 10px;
+  text-decoration: none;
+  background: var(--main-color-light);
+  border: 2.5px solid var(--main-color-light);
+  transition: flex 0.7s ease-in;
+  font-family: 'Encode Sans', sans-serif;
+  font-weight: 600;
+  border-radius: 10px;
+  color: #fffafa;
+  width: 102px;
+  height: 38px;
+  font-size: 15px;
+  cursor: pointer;
 }
+
+.reset_btn {
+  margin: 18px;
+  padding: 10px;
+  text-decoration: none;
+  background: #909090;
+  border: 2.5px solid #909090;
+  transition: flex 0.7s ease-in;
+  font-family: 'Encode Sans', sans-serif;
+  font-weight: 600;
+  border-radius: 10px;
+  color: #fffafa;
+  width: 102px;
+  height: 38px;
+  font-size: 15px;
+  cursor: pointer;
+}
+.filter_btn:hover {
+  color: var(--main-color-light);
+  font-weight: 600;
+  background-color: transparent;
+}
+.reset_btn:hover {
+  color: #909090;
+  font-weight: 600;
+  background-color: transparent;
+}
+/* END MODAL SEARCH **/
+  

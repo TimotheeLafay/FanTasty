@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, FormArray, FormControl, AbstractControl } from 
 import { Recette } from 'src/app/models/recette';
 import { SearchedTag } from 'src/app/models/searchedTag';
 import { RecettesService } from 'src/app/services/recettes.service';
+import { Utils } from "../../core/Utils";
 
 @Component({
   selector: 'app-search-form',
@@ -12,8 +13,8 @@ import { RecettesService } from 'src/app/services/recettes.service';
 export class SearchFormComponent implements OnInit {
 
   searchForm: FormGroup
-  search : boolean = false;
-  searched : boolean = false;
+  search: boolean = false;
+  searched: boolean = false;
 
   lstDifficulte: Array<any> = [
     { name: 'Très facile', value: '1' },
@@ -40,7 +41,7 @@ export class SearchFormComponent implements OnInit {
     { name: 'Ete', value: 'Ete' },
     { name: 'Automne', value: 'Automne' },
     { name: 'Hiver', value: 'Hiver' },
-    {name : 'Toutes', value : 'Toutes'}
+    { name: 'Toutes', value: 'Toutes' }
   ];
 
   recettes: Recette[] = [];
@@ -58,20 +59,40 @@ export class SearchFormComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  disable() : void {
+  disable(): void {
     document.querySelector('body')?.classList.remove('disable-scroll');
     document.querySelector('#search-box-model-container')?.classList.remove('active')
     document.querySelector('.search-box-modal-over')?.classList.remove('active')
     document.querySelector('.search-box-modal-over')?.classList.add('disable')
     document.querySelector('#search-box-model-container')?.classList.add('disable')
+    document.querySelector('.search-input')?.classList.remove('search-input-prop');
+
+    if (Utils.isInDarkMode()) {
+      document.querySelector('#search-box-model-container')?.classList.remove('bg-light_search-modal')
+      document.querySelector('.search-input')?.classList.remove('bg-light_search-modal')
+    } else {
+      document.querySelector('#search-box-model-container')?.classList.remove('bg-dark_search-modal')
+      document.querySelector('.search-input')?.classList.remove('bg-dark_search-modal')
+    }
+
   }
 
-  displayModal() : void {
+  displayModal(): void {
     document.querySelector('body')?.classList.add('disable-scroll');
+    document.querySelector('.search-input')?.classList.add('search-input-prop');
     document.querySelector('#search-box-model-container')?.classList.remove('disable')
     document.querySelector('.search-box-modal-over')?.classList.remove('disable')
     document.querySelector('.search-box-modal-over')?.classList.add('active')
     document.querySelector('#search-box-model-container')?.classList.add('active')
+
+    if (!Utils.isInDarkMode()) {
+      document.querySelector('#search-box-model-container')?.classList.add('bg-light_search-modal')
+      document.querySelector('.search-input')?.classList.add('bg-light_search-modal')
+    } else {
+      document.querySelector('#search-box-model-container')?.classList.add('bg-dark_search-modal')
+      document.querySelector('.search-input')?.classList.add('bg-dark_search-modal')
+    }
+
     this.search = true;
 
   }

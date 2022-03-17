@@ -74,6 +74,8 @@ export class HeaderComponent implements OnInit {
     let modal: Element = document.querySelector('.container')!;
     let toggleOnBg: Element = document.querySelector('.toggle')!;
     let toggleOffBg: Element = document.querySelector('.utensils-back')!;
+    let searchModal: Element = document.querySelector('#search-box-model-container')!;
+    let searchModalInput: Element = document.querySelector('.search-input')!;
 
     console.log(toggleOffBg)
     console.log(recipeCard)
@@ -84,6 +86,12 @@ export class HeaderComponent implements OnInit {
       modal.classList.add('bg-dark-modal');
       sideBarBg.classList.remove('sd-light');
       sideBarBg.classList.add('sd-dark');
+      searchModal.classList.add('bg-dark_search-modal');
+      searchModal.classList.remove('bg-light_search-modal');
+
+      searchModalInput.classList.remove('bg-light_search-modal')
+      searchModalInput.classList.add('bg-dark_search-modal')
+
 
       if (recipeCard != null) {
         recipeCard.classList.remove('card-bg');
@@ -122,6 +130,12 @@ export class HeaderComponent implements OnInit {
       modal.classList.remove('bg-dark-modal')
       sideBarBg.classList.remove('sd-dark');
       sideBarBg.classList.add('sd-light');
+
+      searchModal.classList.remove('bg-dark_search-modal');
+      searchModal.classList.add('bg-light_search-modal');
+
+      searchModalInput.classList.add('bg-light_search-modal')
+      searchModalInput.classList.remove('bg-dark_search-modal')
 
     }
   }

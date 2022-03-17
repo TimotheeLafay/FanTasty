@@ -24,7 +24,6 @@
                 <h3 class="titleIconDifficulteBudgetSaison">Saison:</h3>
                 <img class="imgIconDifficulteBudgetSaison" [src]="iconSaison()" />
             </div>
-
             <label class="toggle-utensils">
                 <input type="checkbox" />
                 <span class="utensils-back {{optionalClassSpanUtensil}}">
@@ -33,11 +32,31 @@
                     <span class="label label-utensils" (click)="showIngredientsUtensils($event)">Ustensiles</span>
                 </span>
             </label>
-
             <div *ngIf="display">
-                <!-- bouton pour augmenter le nombre de personnes-->
-                <div class="containerProportions">
 
+                <ul class="ingredients" *ngFor="let ingredientRecette of recette?.ingredients">
+                    <li>{{ingredientRecette.ingredient.nom}} | {{personneVoulu * ingredientRecette.quantite /
+                        recette.nombrePersonnes}} {{ingredientRecette.unite}}</li>
+                </ul>
+            </div>
+            <div *ngIf="!display">
+                <ul class="ingredients" *ngFor="let ustensiles of recette?.ustensiles">
+                    <li>{{ustensiles}}</li>
+                </ul>
+
+            </div>
+
+
+        </div>
+
+        <div>
+            <figure class="recipe_img">
+                <img class="recipe-template_img" [src]="urlImage" alt="">
+                <figcaption>{{recette?.auteur}}</figcaption>
+            </figure>
+
+            <ul>
+                <li class="containerProportions">
                     🥄 Personne(s):
                     <button class="btnPortion" (click)="btnDecrementationNbrIngredient()">
                         <img class="imgIconPlusMoins" [src]="iconMoins()" />
@@ -46,46 +65,25 @@
                     <button class="btnPortion" (click)="btnIncrementationNbrIngredient()">
                         <img class="imgIconPlusMoins" [src]="iconPlus()" />
                     </button>
-                </div>
-                <!-- Fin bouton -->
-                <ul class="ingredients" *ngFor="let ingredientRecette of recette?.ingredients">
-                    <li>{{ingredientRecette.ingredient.nom}} | {{personneVoulu * ingredientRecette.quantite /
-                        recette.nombrePersonnes}} {{ingredientRecette.unite}}</li>
-                </ul>
-            </div>
+                </li>
+                <li>⏲️Temps de préparation : {{recette?.temps?.tempsPreparation}}</li>
+                <li>👨🏻‍🍳Temps de Cuisson : {{recette?.temps?.tempsCuisson}}</li>
+                <li>✔️Temps total : {{recette?.temps?.tempsTotal}}</li>
 
-            <div *ngIf="!display">
-                <ul class="ingredients" *ngFor="let ustensiles of recette?.ustensiles">
-                    <li>{{ustensiles}}</li>
-                </ul>
-            </div>
-
-
-            <div>
-                <figure>
-                    <img class="recipe-template_img" [src]="urlImage" alt="">
-                    <figcaption>{{recette?.auteur}}</figcaption>
-                </figure>
-                <ul>
-                    <li>⏲️Temps de préparation : {{recette?.temps?.tempsPreparation}}</li>
-                    <li>👨🏻‍🍳Temps de Cuisson : {{recette?.temps?.tempsCuisson}}</li>
-                    <li>✔️Temps total : {{recette?.temps?.tempsTotal}}</li>
-
-                </ul>
-
-            </div>
-        </div>
-
-        <div id="process"></div>
-
-        <div class="process">
-            <h2 class="subtitle-recipe">Préparation</h2>
-
-            <ol class="instructions" *ngFor="let etape of recette?.etapes; let index = index">
-                <h3 class="subtitle-process">Etape {{index +1}}</h3>
-                <li class="instructions">{{etape}}</li>
-            </ol>
+            </ul>
         </div>
     </div>
 
-    <app-footer *ngIf="!loading"></app-footer>
+    <div id="process"></div>
+
+    <div class="process">
+        <h2 class="subtitle-recipe">Préparation</h2>
+
+        <ol class="instructions" *ngFor="let etape of recette?.etapes; let index = index">
+            <h3 class="subtitle-process">Etape {{index +1}}</h3>
+            <li class="instructions">{{etape}}</li>
+        </ol>
+    </div>
+</div>
+
+<app-footer *ngIf="!loading"></app-footer>

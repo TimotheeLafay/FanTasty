@@ -26,9 +26,16 @@ body.dark{
   background-color: #FFFFFF;
   box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
 }
+.bg-light_search-modal {
+  background-color: white;
+}
 .bg-dark-modal{
   background-color: #28282B;
   box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+}
+
+.bg-dark_search-modal{
+  background-color: var(--bg-color-dark);
 }
 .recipe-card{
    background-color: transparent;
