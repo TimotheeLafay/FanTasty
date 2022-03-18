@@ -214,7 +214,7 @@ namespace FanTastyBack.Repositories
 
         public List<Recette> RecettesCarrousel()
         {
-            List<Recette> recettesCarrousel = this._recettes.Find(rec => true).Skip(2).Limit(5).ToList();
+            List<Recette> recettesCarrousel = this._recettes.Find(rec => true).Skip(10).Limit(3).ToList();
 
             return recettesCarrousel;
         }

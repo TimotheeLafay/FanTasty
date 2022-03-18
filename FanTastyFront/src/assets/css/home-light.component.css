@@ -598,11 +598,17 @@ footer {
     height: auto;
 }
 
+.container-panels {
+  display: inline-flex;
+  justify-content: center;
+}
+
+
 .panel{
     margin: 10px;
     border-radius: 30px;
-    width: 168px;
-    height: 320px;
+    width: 392px;
+    height: 325px;
     position:relative;
     transition:flex 0.7s ease-in;
     border: 2.5px solid var(--main-color-light);
@@ -610,7 +616,7 @@ footer {
 
 .img_panel{
   width: 100%;
-  height: 320px;
+  height: 325px;
   border-radius: 30px;
 }
 .panel:hover{
@@ -620,7 +626,7 @@ footer {
 
 .panel_active{
     flex:0.45;
-  width: 500px;
+  width: 938px;
 }
 .panel_active h3{
     opacity:1;
@@ -649,18 +655,19 @@ footer {
 }
 
 .recipe{
-  margin: 0 15px 0 15px;
-  width: 558px;
-  height: 368px;
+  margin: 0 30px 0 30px;
+  width: 574px;
+  height: 314px;
   border-radius: 40px;
   border: 2.5px solid var(--main-color-light);
 }
 
 .daily_recipe{
-  width: 100%;
-  height: 368px;
-  border-radius: 40px;
-  background-position: center;
+    width: 100%;
+    height: 314px;
+    border-radius: 40px;
+    background-position: center;
+    object-fit: cover;
 }
 
 .recipe:hover{
