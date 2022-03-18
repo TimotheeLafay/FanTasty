@@ -30,7 +30,8 @@
 .favorite-recipe_img{   
   border-radius: 35px;   
   width: 320px;
-  height: 230px;      
+  height: 230px;
+  object-fit: cover;      
 }
 
 .container_user-btn {
