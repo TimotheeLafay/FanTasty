@@ -1,10 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-footer',
   templateUrl: './footer.component.html',
-  styleUrls: ['../../../assets/css/footer.component.css']
+  styleUrls: ['../../../assets/css/footer.component.css'],
+  encapsulation: ViewEncapsulation.None,
 })
 export class FooterComponent implements OnInit {
   color: string = 'bgColorLight';

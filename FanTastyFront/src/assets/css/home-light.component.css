@@ -326,59 +326,13 @@ footer {
 .footer-inner {
   display: flex;
   justify-content: center;
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 80px;
-    position: relative;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 80px;
+  position: relative;
+  font-size: 15px;
 }
-
-.footer-item {
-    float: left;
-    margin: 0 7.2% 0 0;
-}
-
-.footer-item:nth-of-type(4) {
-    display: none;
-}
-
-.footer-item:nth-of-type(7) {
-    float: right;
-    margin-right: 0;
-}
-
-.footer-button {
-    color: white;
-    position: relative;
-    font-weight: 400;
-    font-size: 16px;
-    transition: 1s;
-    transition-delay: .2s;
-    padding: 14px;
-}
-
-.footer-button:after {
-    content: "";
-    position: absolute;
-    top: 45px;
-    right: 13px;
-    background-color: white;
-    height: 1px;
-    width: 86px;
-    transition: .6s;
-}
-
-.footer-button:hover {
-    color: black;
-    background-color: white;
-}
-
-.footer-button:hover:after {
-    width: 112px;
-    right: 0px;
-}
-
-
 
 h2 {
     font-weight: 300;
@@ -407,19 +361,6 @@ h3.desktop {
     padding-top: 30px;
 }
 
-ul {
-    line-height: 1.8;
-    list-style-type: none;
-    padding: 0;
-}
-
-li {
-    font-weight: 300;
-    font-size: 13px;
-    color: #d1d1d1;
-    letter-spacing: 0.03em;
-}
-
 p {
     font-weight: 300;
     font-size: 13px;
@@ -433,24 +374,8 @@ a {
     color: #d1d1d1;
 }
 
-a:hover {
-    color: white;
-}
-
 .desktop {
     display: auto;
-}
-
-.footer-inner:after {
-    content: "Made with ♡ by Fan'Tasty 2022";
-    font-weight: 300;
-    letter-spacing: 0.03em;
-    font-size: 13px;
-    color: #d1d1d1;
-    position: absolute;
-    top: 200px;
-    clear: both;
-    display: block;
 }
 
 @media (max-width: 1024px) {
@@ -473,25 +398,6 @@ footer {
     padding-bottom: 32px;
     float: none;
     width: 100%;
-}
-
-.footer-item:nth-of-type(2) {
-    clear: both;
-}
-
-.footer-item:nth-of-type(4) {
-    clear: both;
-    display: block;
-}
-
-.footer-item:nth-of-type(6) {
-    clear: both;
-}
-
-.footer-item:nth-of-type(7) {
-    clear: both;
-    float: left;
-    margin: 20px 0 0 -13px;
 }
 
 .desktop {

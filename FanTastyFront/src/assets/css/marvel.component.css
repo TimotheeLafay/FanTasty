@@ -375,15 +375,18 @@ a:hover {
     display: auto;
 }
 
-@media (max-width: 1024px) {
-  
-footer {
-    padding: 50px 0 5px 0 !important;
-}
 
 .footer-inner {
     padding-bottom: 10px;
     margin-bottom: 50px;
+    color: black;
+    font-size: 15px;
+}
+
+@media (max-width: 1024px) {
+  
+footer {
+    padding: 50px 0 5px 0 !important;
 }
 
 .footer-item {
